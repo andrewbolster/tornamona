@@ -1,5 +1,6 @@
-import pandas as pd
 from typing import Optional, List, Union, Dict, AnyStr
+
+import pandas as pd
 
 
 class Dataset:
@@ -21,5 +22,5 @@ class Dataset:
     def to_df(self) -> pd.DataFrame:
         if isinstance(pd.DataFrame, self.data):
             return self.data
-        else: # assume it's something concatable
+        else:  # assume it's something concatable
             return pd.concat(self.data)

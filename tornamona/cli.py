@@ -1,5 +1,6 @@
 """Console script for tornamona."""
 import sys
+
 import click
 
 
