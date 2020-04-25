@@ -22,7 +22,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: bolster
   password:
-    secure: PLEASE_REPLACE_ME
+    secure: E/V1vjUVCbqwTW+wqHYe7g2mQ4wbxQxVOEbzSkQGWNADi2Lnx0RaYULHwaIg2qwE/10pD1JppRU2mi5H7vd86Wm58A5AY23C87Ua6WV+kkH2l18OT97F3Y9f5rjJ4PVJf4sgYzy3ILWBTwNd/W1fQ6a0X4bNUrp0f0ZL1CItWolYz9aHrWzfD+5qWnCYjM8o99tJZmboUCDnEN9aC5dRSvGGLdeUCKUjvB8eFpRnLDXJoNiWxXAWnOsg3VvRPdDQNDMg+oDQUYYlp+mKkxgv2UrDs5IxizXgXG1dWB8bIjWnKG6GyDOWVhaAO6ORtKplHXkcNSVwfZZ337IlcD8tjoUX1XUZWM75CYX8u0UjkiXAuzuisf9bqYjcq39h8gNUWULXstX2qgKRRz6g/3AZhgzBOdZhDWGTREnrr38e2YGF1p76f6m6jYaugqZNvBBFHX/KituM1DmzBvaMluny6np8Y2pGjCDldyCl8zVaV8noaoY+gSyrjX/5NIWT4kMTwRC3iDQ0BOnRxIY+fRtTmaic0f9+tB2kRnNWoBtpZoKlFpxl4R03B+9bN7dmOTJ93zeUQ3vjsdsINDtM8S5eCP1LtzY8/Mbnt7hLJ9lts4H9hmwVrUd1bwj54Y1srrnPGWWW1b/Q0p44Is3+dDRR+PFQVTKXLkI/UxE1ipCSor4=
   on:
     tags: true
     repo: andrewbolster/tornamona
