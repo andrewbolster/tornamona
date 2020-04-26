@@ -18,4 +18,4 @@ sphinx-copybutton==0.2.11
 sphinx_rtd_theme
 sphinx-autodoc-typehints
 autoapi==2.0.1
-pytest-cov
+pytest-cov==2.8.1
