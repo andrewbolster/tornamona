@@ -5,7 +5,7 @@
 [![Documentation Status](https://readthedocs.org/projects/tornamona/badge/?version=latest)](https://tornamona.readthedocs.io/en/latest/?badge=latest)
 [![Mergify Status](https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges/andrewbolster/tornamona&style=flat)](https://mergify.io)
 [![codecov](https://codecov.io/gh/andrewbolster/tornamona/branch/master/graph/badge.svg)](https://codecov.io/gh/andrewbolster/tornamona)
-
+[![Requirements Status](https://requires.io/github/andrewbolster/tornamona/requirements.svg?branch=master)](https://requires.io/github/andrewbolster/tornamona/requirements/?branch=master)
 
 A series of fixes for Data originating from Northern Ireland
 
