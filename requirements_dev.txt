@@ -15,6 +15,6 @@ sphinx-click
 nbsphinx
 sphinx-issues
 sphinx-copybutton
-sphinx_rtd_theme
+sphinx_rtd_theme==0.4.3
 sphinx-autodoc-typehints
 autoapi
