@@ -2,27 +2,31 @@
 
 language: python
 python:
-  - 3.8
-  - 3.7
-  - 3.6
+    - 3.8
+    - 3.7
+    - 3.6
 
 # Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -U tox-travis
+install: pip install -U tox-travis codecov
 
 # Command to run tests, e.g. python setup.py test
 script: tox
+
+# codecoverage (codecov.io)
+after_success: codecov
 
 # Assuming you have installed the travis-ci CLI tool, after you
 # create the Github repo and add it to Travis, run the
 # following command to finish PyPI deployment setup:
 # $ travis encrypt --add deploy.password
 deploy:
-  provider: pypi
-  distributions: sdist bdist_wheel
-  user: bolster
-  password:
-    secure: E/V1vjUVCbqwTW+wqHYe7g2mQ4wbxQxVOEbzSkQGWNADi2Lnx0RaYULHwaIg2qwE/10pD1JppRU2mi5H7vd86Wm58A5AY23C87Ua6WV+kkH2l18OT97F3Y9f5rjJ4PVJf4sgYzy3ILWBTwNd/W1fQ6a0X4bNUrp0f0ZL1CItWolYz9aHrWzfD+5qWnCYjM8o99tJZmboUCDnEN9aC5dRSvGGLdeUCKUjvB8eFpRnLDXJoNiWxXAWnOsg3VvRPdDQNDMg+oDQUYYlp+mKkxgv2UrDs5IxizXgXG1dWB8bIjWnKG6GyDOWVhaAO6ORtKplHXkcNSVwfZZ337IlcD8tjoUX1XUZWM75CYX8u0UjkiXAuzuisf9bqYjcq39h8gNUWULXstX2qgKRRz6g/3AZhgzBOdZhDWGTREnrr38e2YGF1p76f6m6jYaugqZNvBBFHX/KituM1DmzBvaMluny6np8Y2pGjCDldyCl8zVaV8noaoY+gSyrjX/5NIWT4kMTwRC3iDQ0BOnRxIY+fRtTmaic0f9+tB2kRnNWoBtpZoKlFpxl4R03B+9bN7dmOTJ93zeUQ3vjsdsINDtM8S5eCP1LtzY8/Mbnt7hLJ9lts4H9hmwVrUd1bwj54Y1srrnPGWWW1b/Q0p44Is3+dDRR+PFQVTKXLkI/UxE1ipCSor4=
-  on:
-    tags: true
-    repo: andrewbolster/tornamona
-    python: 3.8
+    provider: pypi
+    distributions: sdist bdist_wheel
+    user: __token__
+    password:
+        secure: oArqxXfm9s2JE8YNzSvIENUk+v5vOOrzPGslIEx/Z6A97SvVDuMryROR2HhPG6RpOvS7/8ImXN777B7QHqK1Lypsm9YXfMt7+VNPLJq6e5b6G9k2kreUmFVNHf6D1/BXNxlFpRNUneZF5ZOw9XdqonWjPYpgUW5KcjMktpqWVomjoXtddwpfyCripfec9sEo74RxwuSXSaQW7IYadKcOgbH4SpTgL5DCsKuGfDXYnLMI5esE//++bVcWfC1Wq5nQU9TZFpxovGrgx+/SZzihwucFry2nwaL4kjfSqAaGsKFxrCQPYvAw3WPcXNEioQNhZMhDHlHWlAoR/pmW2LgsslI39dW6mm4yhsYBGSkL7WOCxcdqKysG9JvBaeneaOulv3I1Jdx5sA1Dzx9w6AvqSPdkg4oSyLa5awH6jyk57RgZE2GLCEZ377wLaN4etQ4ifA8N1CkDUW+Bp6yktdV+Vo4MZm8Mjw4uGk4+4Bx+OZ7/9WByfRSgqzympuYIcvA+PzaujbH5TEvga9U00SVWhQxtcp7dSsxZXTthsDGpL4QPucDfQIPO4c6ajqDQJBZ2l7vLOUZFC+YTG72kTCINznKjBcqWjXB0I2EHe4XgFkVA6AL7WVbktgbnG3YrZbwzLLzaZhH2A//uuoFmT4gx04Lg701Pw/9Qp3fmH7802vU=
+    skip_existing: true
+    on:
+        tags: true
+        repo: andrewbolster/tornamona
+        python: 3.8

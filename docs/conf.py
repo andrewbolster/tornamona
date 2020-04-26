@@ -19,9 +19,11 @@
 #
 import os
 import sys
+
 sys.path.insert(0, os.path.abspath('..'))
 
 import tornamona
+from recommonmark.transform import AutoStructify
 
 # -- General configuration ---------------------------------------------
 
@@ -31,7 +33,22 @@ import tornamona
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode']
+extensions = [
+    'recommonmark',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
+    'sphinx.ext.inheritance_diagram',
+    'sphinx_click.ext',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.autosectionlabel',
+    'nbsphinx',
+    'sphinx_issues',
+    'sphinx_copybutton',
+    'sphinx_autodoc_typehints',
+    'autoapi.sphinx'
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -40,7 +57,7 @@ templates_path = ['_templates']
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
 
 # The master toctree document.
 master_doc = 'index'
@@ -49,6 +66,15 @@ master_doc = 'index'
 project = 'Tornamona'
 copyright = "2020, Andrew Bolster"
 author = "Andrew Bolster"
+github_user = 'andrewbolster'
+github_project = project.lower()
+github_stub = f'{github_user}/{github_project}'
+github_root = f'https://github.com/{github_stub}/'
+github_doc_root = f'{github_root}tree/master/docs/'
+
+issues_github_path = github_stub
+
+autoapi_modules = {github_project: None}
 
 # The version info for the project you're documenting, acts as replacement
 # for |version| and |release|, also used in various other places throughout
@@ -83,7 +109,7 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a
 # theme further.  For a list of options available for each theme, see the
@@ -159,4 +185,16 @@ texinfo_documents = [
 ]
 
 
+# At the bottom of conf.py
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+        'url_resolver': lambda url: github_doc_root + url,
+        'auto_toc_tree_section': 'Contents',
+        'enable_math': True,
+        'enable_eval_rst': True,
+        'auto_code_block': True,
+    }, True)
+    app.add_transform(AutoStructify)
 
+
+autosectionlabel_prefix_document = True

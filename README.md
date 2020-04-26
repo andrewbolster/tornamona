@@ -1,4 +1,10 @@
 # tornamona
+
+[![pyup.io](https://pyup.io/repos/github/andrewbolster/tornamona/shield.svg)](https://pyup.io/repos/github/andrewbolster/tornamona/)
+[![Build Status](https://travis-ci.org/andrewbolster/tornamona.svg?branch=master)](https://travis-ci.org/andrewbolster/tornamona)
+[![Documentation Status](https://readthedocs.org/projects/tornamona/badge/?version=latest)](https://tornamona.readthedocs.io/en/latest/?badge=latest)
+
+
 A series of fixes for Data originating from Northern Ireland
 
 This is very much a work in progress and I'll only really add to it as things annoy me,
@@ -44,3 +50,9 @@ dataset.data.head().to_markdown()
 Everything that has ever pissed me off about open data
 
 [![NIDC2018](http://img.youtube.com/vi/mtrIEW2nCMc/0.jpg)](http://www.youtube.com/watch?v=mtrIEW2nCMc "Idiots Guide to (Open) Data Science")
+
+# Credits
+
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter)
+and the [`audreyr/cookiecutter-pypackage`](https://github.com/audreyr/cookiecutter-pypackage) project template.
+

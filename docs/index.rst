@@ -5,13 +5,15 @@ Welcome to Tornamona's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   readme
+   readme.md
+   tornamona/tornamona
    installation
    usage
-   modules
    contributing
    authors
    history
+
+
 
 Indices and tables
 ==================
