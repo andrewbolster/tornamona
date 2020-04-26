@@ -3,6 +3,7 @@
 [![pyup.io](https://pyup.io/repos/github/andrewbolster/tornamona/shield.svg)](https://pyup.io/repos/github/andrewbolster/tornamona/)
 [![Build Status](https://travis-ci.org/andrewbolster/tornamona.svg?branch=master)](https://travis-ci.org/andrewbolster/tornamona)
 [![Documentation Status](https://readthedocs.org/projects/tornamona/badge/?version=latest)](https://tornamona.readthedocs.io/en/latest/?badge=latest)
+[![Mergify Status](https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges/andrewbolster/tornamona&style=flat)](https://mergify.io)
 
 
 A series of fixes for Data originating from Northern Ireland
