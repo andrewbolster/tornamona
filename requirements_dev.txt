@@ -12,7 +12,7 @@ pytest==5.4.1
 pytest-runner==5.2
 recommonmark==0.6.0
 sphinx-click
-nbsphinx
+nbsphinx==0.6.1
 sphinx-issues
 sphinx-copybutton
 sphinx_rtd_theme
