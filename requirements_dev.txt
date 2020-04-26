@@ -10,11 +10,12 @@ twine==3.1.1
 Click==7.1.1
 pytest==5.4.1
 pytest-runner==5.2
-recommonmark
-sphinx-click
-nbsphinx
-sphinx-issues
+sphinx-click==2.3.2
+recommonmark==0.6.0
+sphinx-issues==1.2.0
+nbsphinx==0.6.1
 sphinx-copybutton
 sphinx_rtd_theme==0.4.3
 sphinx-autodoc-typehints
-autoapi
+autoapi==2.0.1
+pytest-cov

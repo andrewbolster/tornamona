@@ -7,13 +7,13 @@ python:
     - 3.6
 
 # Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -U tox-travis codecov
+install: pip install -U tox-travis codecov coverage
 
 # Command to run tests, e.g. python setup.py test
 script: tox
 
 # codecoverage (codecov.io)
-after_success: codecov
+after_success: coverage combine && codecov
 
 # Assuming you have installed the travis-ci CLI tool, after you
 # create the Github repo and add it to Travis, run the
@@ -27,6 +27,6 @@ deploy:
         secure: oArqxXfm9s2JE8YNzSvIENUk+v5vOOrzPGslIEx/Z6A97SvVDuMryROR2HhPG6RpOvS7/8ImXN777B7QHqK1Lypsm9YXfMt7+VNPLJq6e5b6G9k2kreUmFVNHf6D1/BXNxlFpRNUneZF5ZOw9XdqonWjPYpgUW5KcjMktpqWVomjoXtddwpfyCripfec9sEo74RxwuSXSaQW7IYadKcOgbH4SpTgL5DCsKuGfDXYnLMI5esE//++bVcWfC1Wq5nQU9TZFpxovGrgx+/SZzihwucFry2nwaL4kjfSqAaGsKFxrCQPYvAw3WPcXNEioQNhZMhDHlHWlAoR/pmW2LgsslI39dW6mm4yhsYBGSkL7WOCxcdqKysG9JvBaeneaOulv3I1Jdx5sA1Dzx9w6AvqSPdkg4oSyLa5awH6jyk57RgZE2GLCEZ377wLaN4etQ4ifA8N1CkDUW+Bp6yktdV+Vo4MZm8Mjw4uGk4+4Bx+OZ7/9WByfRSgqzympuYIcvA+PzaujbH5TEvga9U00SVWhQxtcp7dSsxZXTthsDGpL4QPucDfQIPO4c6ajqDQJBZ2l7vLOUZFC+YTG72kTCINznKjBcqWjXB0I2EHe4XgFkVA6AL7WVbktgbnG3YrZbwzLLzaZhH2A//uuoFmT4gx04Lg701Pw/9Qp3fmH7802vU=
     skip_existing: true
     on:
-        tags: true
+        # tags: true
         repo: andrewbolster/tornamona
         python: 3.8
