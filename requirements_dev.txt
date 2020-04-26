@@ -15,7 +15,7 @@ recommonmark==0.6.0
 sphinx-issues==1.2.0
 nbsphinx==0.6.1
 sphinx-copybutton
-sphinx_rtd_theme
+sphinx_rtd_theme==0.4.3
 sphinx-autodoc-typehints
 autoapi==2.0.1
 pytest-cov==2.8.1
