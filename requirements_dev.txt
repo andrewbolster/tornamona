@@ -17,4 +17,4 @@ sphinx-issues
 sphinx-copybutton
 sphinx_rtd_theme
 sphinx-autodoc-typehints
-autoapi
+autoapi==2.0.1
