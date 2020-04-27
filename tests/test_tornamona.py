@@ -2,14 +2,12 @@
 
 """Tests for `tornamona` package."""
 
+import pandas as pd
 import pytest
-
 from click.testing import CliRunner
 
-from tornamona import nisra
 from tornamona import cli
-
-import pandas as pd
+from tornamona import nisra
 
 
 @pytest.fixture
@@ -30,7 +28,7 @@ def test_content(response):
 def test_nisra_smoke():
     v = nisra.WeeklyDeaths().get().clean()
     assert v.data.shape[1] == 10, 'Should be 10 Columns Wide'
-    assert any(v.data['Week Start']==pd.to_datetime('2004-02-01')) == False, 'Found crazy 2004 date'
+    assert any(v.data['Week Start'] == pd.to_datetime('2004-02-01')) == False, 'Found crazy 2004 date'
     assert v.data.dtypes['Week Start'] == '<M8[ns]', 'Datetime column inference broken'
 
 def test_command_line_interface():
