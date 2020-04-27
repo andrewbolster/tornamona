@@ -1,9 +1,10 @@
+from abc import ABCMeta
 from typing import Optional, List, Union, Dict, AnyStr
 
 import pandas as pd
 
 
-class Dataset:
+class Dataset(metaclass=ABCMeta):
     fixes: List = []
     data: Optional[Union[Dict, pd.DataFrame, pd.Series]] = None
     sources: Union[AnyStr, Dict] = None
@@ -24,3 +25,7 @@ class Dataset:
             return self.data
         else:  # assume it's something concatable
             return pd.concat(self.data)
+
+    def _fix_dtypes(self):
+        """Fortunately this is super easy, barely an inconvenience, thanks to the pandas built-in 'infer_objects()'"""
+        self.data = self.data.infer_objects().reset_index(drop=True)
