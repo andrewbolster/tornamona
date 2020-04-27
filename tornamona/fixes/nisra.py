@@ -91,27 +91,22 @@ class WeeklyDeaths(Dataset):
     def _3_2014_typo(self) -> Dataset:
         """
         There is a typo in the Week Starts column in the 2014 dataset where one week magically appears to be 2004
+
+        This was resolved 2020-04-27 https://twitter.com/NISRA/status/1254689659311054848
         :return:
         """
-        if not any(self.data['Week Start'] == pd.to_datetime('2004-02-01')):
-            raise ValueError("Can't find broken value, this fix has possibly been resolved!")
-
-        self.data.loc[
-            self.data['Week Start'] == pd.to_datetime('2004-02-01'),
-            'Week Start'
-        ] = pd.to_datetime('2014-02-01')
+        if any(self.data['Week Start'] == pd.to_datetime('2004-02-01')):
+            self.data.loc[
+                self.data['Week Start'] == pd.to_datetime('2004-02-01'),
+                'Week Start'
+            ] = pd.to_datetime('2014-02-01')
 
         return self
-
-    def _4_fix_dtypes(self) -> Dataset:
-        """Fortunately this is super easy, barely an inconvenience, thanks to the pandas built-in 'infer_objects()'"""
-        self.data = self.data.infer_objects().reset_index(drop=True)
 
     def clean(self) -> Dataset:
         self._0_strip_irrelevant_sheets()
         self._1_dump_first_3_rows_and_rename_columns()
         self._2_concat_and_dropna()
-        self._3_2014_typo()
-        self._4_fix_dtypes()
+        self._fix_dtypes()
 
         return self
