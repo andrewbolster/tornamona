@@ -2,6 +2,6 @@
 
 __author__ = """Andrew Bolster"""
 __email__ = 'me@andrewbolster.info'
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 from tornamona.fixes import nisra
