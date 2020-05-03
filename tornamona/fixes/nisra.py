@@ -1,3 +1,5 @@
+from urllib.error import HTTPError
+
 import pandas as pd
 
 from tornamona.fixes import Dataset
@@ -17,10 +19,13 @@ class WeeklyDeaths(Dataset):
         self.sources = {
             'historical': 'https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Weekly_Deaths%20'
                           '-%20Historical.xls',
-            'covid_19': 'https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Weekly_Deaths.xls'
+            'covid_19': 'https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Weekly_Deaths%20-%20w%20e%2024th%20April%202020.XLS'
         }
         for source, url in self.sources.items():
-            self.data[source] = pd.read_excel(url, sheet_name=None)  # Get all sheet names as a dict of DataFrames
+            try:
+                self.data[source] = pd.read_excel(url, sheet_name=None)  # Get all sheet names as a dict of DataFrames
+            except HTTPError as e:
+                raise RuntimeError(f'Get Failed for source {source}/{url}') from e
 
         return self
 
