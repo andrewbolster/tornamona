@@ -29,7 +29,7 @@ Source: https://www.nisra.gov.uk/publications/weekly-deaths
 #### What is wrong with the data as presented?
 * The Usual Boilerplate (i.e. non numerical footers, non-merged multi row headers, overly complex column headers, inconsistent structure)
 * ~~a typo in the 2014 Week Start date ([Which actually inspired me to make this repo in the first place](https://twitter.com/Bolster/status/1254017115817943041))~~ ([This was fixed](https://twitter.com/NISRA/status/1254689659311054848))
-* [Then the updates went into new files rather than reusing the same URLs, which makes this whole thing more of a pain](https://twitter.com/Bolster/status/1256948066319507458)
+* [~~Then the updates went into new files rather than reusing the same URLs, which makes this whole thing more of a pain~~](https://twitter.com/Bolster/status/1256948066319507458) ([This was also fixed](https://twitter.com/NISRA/status/1257366189803802624))
 
 #### How do I use the new one
 

@@ -19,7 +19,7 @@ class WeeklyDeaths(Dataset):
         self.sources = {
             'historical': 'https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Weekly_Deaths%20'
                           '-%20Historical.xls',
-            'covid_19': 'https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Weekly_Deaths%20-%20w%20e%2024th%20April%202020.XLS'
+            'covid_19': 'https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Weekly_Deaths.xls'
         }
         for source, url in self.sources.items():
             try:
