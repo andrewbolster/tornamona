@@ -7,4 +7,4 @@ sphinx-copybutton==0.2.11
 sphinx_rtd_theme==0.4.3
 sphinx-autodoc-typehints==1.10.3
 autoapi==2.0.1
-Click==7.1.2
+Click==8.1.2
